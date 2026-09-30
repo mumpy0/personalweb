@@ -36,5 +36,35 @@ body{
 /*define separate fonts for headings*/
 h1,h2,h3{
     font-family: Merriweather, poppins , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
+
+}
+
+/* nav bar styling */
+nav{
+    margin: 1em , auto ,3em , auto;
+    width: min(1000px , 1005);
+}/* arrange nav elements in a row */
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 2em;
+}
+/*push everything to the right except first element(Yash Shrivastava) of nav */
+
+nav li:first-child{ /*remember the there should be no space after li:*/
+    margin-right: auto;
+    font-family: merriweather,poppins;
+    font-weight: bold;
+}
+
+nav a{ /*can not use li because default styling of a (blue) can not be over-ridden by li*/
+    text-decoration: none;
+    color: var(--text-color);
+}
+/*now i want to make sure when user hover around nav links they get to
+that its clickable*/
+
+nav a:hover{ /* works for li as well but its a good practice to hove that is actually clickable, here its <a> */
+    text-decoration: underline;
 }
