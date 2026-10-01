@@ -68,3 +68,60 @@ that its clickable*/
 nav a:hover{ /* works for li as well but its a good practice to hove that is actually clickable, here its <a> */
     text-decoration: underline;
 }
+
+
+header,section{ /* there is nothing as section yet in html but for other sections of page we'll be using same design and rules and so we have defined it with header only*/
+    margin: 2em auto; 
+    /* 2em  → top + bottom
+    auto → left + right therefore 
+    2em gives vertical spacing, auto centers horizontally*/
+    width: min(75em , 100%);
+        /* to make more responsive,element can grow up to 75em wide but never overflow the screen
+        Use whichever is smaller: 75em or 100%.*/
+    background-color: var(--color-1);
+    padding: min(2em,15%); 
+        /*the element can have padding up to 2em but never more than 15%
+        Uses whichever is smaller: 2em or 15%.*/
+    border-radius: 1em;/*adds curve to the element */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+header img{
+    max-width: 100%; /*makes sure that image of 100% makes sure , img never overflows its container*/
+    border-radius: 1em; /*round the corners*/
+    object-fit: cover;
+    /*tells img to fill its area without stretching
+    meaning cropping will happen*/
+    object-position: top;
+    /*if cropping does happen  ,focus on top and  crop the bottom of img */
+
+}
+h1{
+    font-size: 2.25rem;
+}
+.text-container{
+    flex: 0 1 32em;
+    /* don't grow , shrink if needed, 34em is the preferred width but shrink if necessary according to flex shrink*/
+    font-size: 1.25rem;
+}
+
+.cta-button{
+    display: inline-block;/* because we want to 
+    add padding and width to these, which is not possible if they are treated like text*/
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 0.75em 1.25em;
+    border-radius: 0.5em;
+    font-weight: 600;
+
+}
+.secondary{
+    background-color: var(--secondary-color);
+}
