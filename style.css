@@ -125,3 +125,6 @@ h1{
 .secondary{
     background-color: var(--secondary-color);
 }
+.cta-button:hover{
+    text-decoration: underline;
+}
